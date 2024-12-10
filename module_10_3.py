@@ -30,7 +30,6 @@ class Bank:
             else:
                 print('Запрос отклонён, недостаточно средств')
                 self.lock.acquire()
-                self.lock.release()
             time.sleep(0.001)
 
 
