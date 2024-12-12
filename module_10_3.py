@@ -11,7 +11,6 @@ class Bank:
     def deposit(self):
         for _ in range(100):
             amount = random.randint(50, 500)
-            self.lock.acquire()
             if self.balance >= 500 and self.lock.locked():
                 self.lock.release()
             self.balance += amount
